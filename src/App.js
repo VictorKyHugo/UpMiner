@@ -1,3 +1,4 @@
+import CardList from "./components/CardList";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 
@@ -6,6 +7,7 @@ function App() {
     <div>
       <Header />
       <Nav />
+      <CardList />
     </div>
   );
 }
