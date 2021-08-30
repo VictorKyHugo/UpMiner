@@ -1,0 +1,80 @@
+.header{
+    margin: 4.5rem;
+    padding-left: 7.5rem;
+
+    position: relative;
+    z-index: -2;
+
+    background:linear-gradient(to right, $light-blue,black);
+    color: white;
+    height: 30rem;
+
+    border-bottom: 0.5rem solid $dark-orange;
+
+    &__background{
+        position: absolute;
+        right: 0;
+        
+        z-index: -1;
+
+
+
+        
+        &__image{
+            width: 63rem;
+        }
+        
+    }
+
+    &__brand{
+        display: flex;
+        font-size: 3rem;
+
+        padding-top: 5rem;
+
+        &__logo{
+            font-weight: bold;
+        }
+
+
+        &__vertical-bar{
+            margin: 0 2rem;
+        }
+
+    }
+
+    &__text{
+        width: 55rem;
+        line-height: 2.5rem;
+        margin: 3rem 0 3.5rem;
+    }
+
+    &__info{
+        display: flex;
+        align-items: flex-start;
+
+        &__learn-more{
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(to right, $light-orange, $dark-orange);
+            width: 10rem;
+            height: 3rem;
+            border-radius: 5px;
+        }
+
+        &__price{
+
+            margin-right: 1.5rem;
+
+            &__currency-symbol{
+                margin-right: 0.5rem;
+            }
+
+            &__value{
+                display: inline-block;
+                font-size: 3.5rem;
+                margin-top: -0.3rem;
+            }
+        }
+    }
+}
