@@ -1,4 +1,4 @@
-import background from '../assets/background2.jpg'
+// import background from '../assets/background2.jpg'
 
 const Header = () => (
     <header className='header'>
