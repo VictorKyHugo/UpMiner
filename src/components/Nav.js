@@ -1,11 +1,15 @@
 import icons from '../assets/icons'
 import NavOption from './NavOption'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { OptionContext } from '../contexts/OptionContext'
 
 
 const Nav = () => {
 
+    const { hasFilter, setHasFilter } = useContext(OptionContext)
+
     const [isActive, setIsActive] = useState({
+        filter: hasFilter,
         activeObject: 0,
         objects: [
             { id: 0, icon: icons.globe, title: 'Todos' },
@@ -22,7 +26,14 @@ const Nav = () => {
     })
 
     const toggleActive = (index) => {
-        setIsActive({ ...isActive, activeObject: isActive.objects[index].id })
+        setIsActive(() => ({
+            ...isActive,
+            activeObject: isActive.objects[index].id,
+            filter: isActive.objects[index].title
+        }),
+            setHasFilter(isActive.objects[index].title),
+        )
+
     }
 
     return (
@@ -36,7 +47,7 @@ const Nav = () => {
                         key={item.id}
                         icon={item.icon}
                         title={item.title}
-                        toggleActive={() => (toggleActive(index))}
+                        toggleActive={() => (toggleActive(index, item.title))}
                         isActive={isActive.activeObject === index}
                     />
                 )
