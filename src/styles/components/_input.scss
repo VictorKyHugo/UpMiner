@@ -1,0 +1,15 @@
+.input{
+
+    margin-left: 5.5rem;
+
+    &__title{
+        font-weight: bold;
+        margin-right: 2rem;
+    }
+
+    &__options{
+        border: 2px #f2f2f2 solid;
+        height: 3rem;
+        width: 18rem;
+    }
+}
