@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 .card{
     height: 25rem;
     width: 27rem;
@@ -16,19 +18,48 @@
     position: relative;
     text-align: center;
 
-    &__icon{
-        margin-top: 2.5rem;
+    &__frame{
+
+        margin-top: 2rem;
+
+        align-self: center;
+
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__icon{
+            width: 3rem;
+            align-self: center;
+            color: $dark-orange;
+    
+            
+        }
     }
 
+
     &__title{
-        margin: 2rem 0;
+        margin: 1rem 0 2rem;
+        font-weight: normal;
     }
 
     &__text{
         font-size: 1.4rem;
         color: #a2a2a2;
 
-        padding-bottom: 3.5rem;
+        padding:0 2rem 3.5rem;
+    }
+
+    &__price{
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.8rem;
+    }
+
+    &__learn-more{
+        margin-bottom: -0.35rem;
     }
 
     &__info{
@@ -42,7 +73,7 @@
 
         background: linear-gradient(60deg , $light-orange, $dark-orange);
         color: white;
-        
+        font-weight: bold;
 
         width: 27rem;
         height: 4.2rem;
