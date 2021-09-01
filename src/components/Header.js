@@ -1,5 +1,7 @@
 // import background from '../assets/background2.jpg'
 
+import { Link } from 'react-router-dom'
+
 const Header = () => (
     <header className='header'>
         {/* <div className='header__background'>
@@ -20,7 +22,9 @@ const Header = () => (
                 <span className='header__info__price__currency-symbol'>R$</span>
                 <span className='header__info__price__value'> 40,00 </span>
             </div>
-            <button className='header__info__learn-more'>Saiba Mais</button>
+            <Link to='/details'>
+                <button className='header__info__learn-more'>Saiba Mais</button>
+            </Link>
         </div>
     </header>
 )
