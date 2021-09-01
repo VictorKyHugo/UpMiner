@@ -1,0 +1,73 @@
+.history{
+    &__title{
+        display: flex;
+        color: $dark-orange;
+
+        margin: 4rem 15rem;
+
+
+        &__text{
+            font-weight: 400;
+        }
+
+        &__go-back{
+            display: block;
+            width: 1.9rem;
+            margin-right: 1.2rem;
+
+            color: $dark-orange;
+
+        }
+    }
+    
+  
+
+    &__text{
+
+        margin: 0 16rem;
+        color: #a2a2a2;
+        line-height: 2.5rem;
+
+
+
+        &__first{
+            margin: 5rem 0 2.5rem;
+        }
+
+        &__second{
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__footer{
+        display: flex;
+        align-items: flex-start;
+
+        margin: 2rem 0 6rem 16rem;
+
+        &__button{
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(to right, $light-orange, $dark-orange);
+            width: 11rem;
+            height: 3.2rem;
+            border-radius: 5px;
+
+            margin-left: 4rem;
+        }
+
+        &__price{
+            &__currency-symbol{
+                margin-right: 0.5rem;
+            }
+
+            &__value{
+                display: inline-block;
+                font-size: 3.5rem;
+                margin-top: -0.3rem;
+            }
+        }
+    }
+
+   
+}

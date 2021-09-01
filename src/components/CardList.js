@@ -34,7 +34,7 @@ const CardList = () => {
                 text: "O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte."
             },
             {
-                id: 5, icon: icons.americas, title: 'Mídia / Internet', price: '29,00', release: '2020/01/07',
+                id: 5, icon: icons.americas, title: 'Mídia / Internet', price: '27,00', release: '2020/01/07',
                 text: "O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte."
             },
             {
@@ -98,8 +98,6 @@ const CardList = () => {
                     return ''
 
                 }).map((item => {
-
-
                     return (
                         <Card
                             key={item.id}
@@ -111,11 +109,9 @@ const CardList = () => {
                     )
                 }))
             }
-
         </div>
     )
 
 }
-
 
 export default CardList

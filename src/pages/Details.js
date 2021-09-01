@@ -1,9 +1,11 @@
 import Header from "../components/Header";
+import History from "../components/History";
 
 function Details() {
     return (
         <div>
-            <Header />
+            <Header theme='light' />
+            <History />
         </div>
     );
 }

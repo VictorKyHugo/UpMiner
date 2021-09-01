@@ -1,0 +1,42 @@
+.carousel{
+        display: flex;
+
+
+    margin: 0 12rem;
+    
+    height: 30rem;
+
+    max-width: 75vw;
+    
+
+
+
+    &__cards{
+
+    overflow: auto;
+    width: 100%;
+
+       display: flex;
+        align-items: center;
+       height: 33rem;
+    }
+
+    &__left-arrow{
+        width: 6rem;
+        color: #656565;
+
+        align-self: center;
+
+    }
+
+    &__right-arrow{
+        transform: rotate(180deg);
+        width: 6rem;
+        justify-self: flex-end;
+        color: #656565;
+
+        align-self: center;
+
+
+    }
+}

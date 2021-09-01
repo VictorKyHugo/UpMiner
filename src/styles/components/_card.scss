@@ -8,12 +8,12 @@
 
     margin: 0 2rem 9rem;
 
-    box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.103);
+    box-shadow: 0px 3px 12px 1px rgba(0, 0, 0, 0.103);
 
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
+    justify-content: flex-start;
 
     position: relative;
     text-align: center;
@@ -29,14 +29,17 @@
 
         display: flex;
         justify-content: center;
-        align-items: center;
+
+        &--no-text{
+            margin-top: 5rem;
+        }
 
         &__icon{
+
             width: 3rem;
             align-self: center;
             color: $dark-orange;
-    
-            
+
         }
     }
 
@@ -60,6 +63,16 @@
 
     &__learn-more{
         margin-bottom: -0.35rem;
+        background: none;
+        color: white;
+        font-weight: bold;
+
+
+        width: 10rem;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     &__info{

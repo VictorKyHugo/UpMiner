@@ -39,9 +39,6 @@ const Nav = () => {
     return (
         <nav className='nav'>
             {isActive.objects.map((item, index) => {
-
-
-
                 return (
                     <NavOption
                         key={item.id}
@@ -53,11 +50,8 @@ const Nav = () => {
                 )
 
             })}
-
         </nav>
     )
 }
-
-
 
 export default Nav
