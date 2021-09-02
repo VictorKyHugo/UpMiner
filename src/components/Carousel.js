@@ -103,7 +103,7 @@ const Carousel = ({ title, price }) => {
 
                 }
             }
-        }, 5000)
+        }, 4000)
 
         return function cleanup() {
             clearInterval(interval)
