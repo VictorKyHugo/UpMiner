@@ -7,60 +7,6 @@ const Carousel = ({ title, price }) => {
     const carousel = useRef(null)
     const [handleScroll, setHandleScroll] = useState(0)
 
-    const handleLeftClick = (e) => {
-
-        e.preventDefault()
-
-        if (handleScroll <= 1) {
-            carousel.current.scrollLeft += carousel.current.offsetWidth * 5
-            setHandleScroll(4)
-        } else {
-            carousel.current.scrollLeft -= carousel.current.offsetWidth
-
-            setHandleScroll(prev => prev - 2)
-        }
-
-    }
-
-    const handleRightClick = (e) => {
-
-        e.preventDefault()
-
-        if (handleScroll >= 3) {
-            carousel.current.scrollLeft -= carousel.current.offsetWidth * 5
-            setHandleScroll(0)
-        } else {
-            carousel.current.scrollLeft += carousel.current.offsetWidth
-            setHandleScroll(prev => prev + 2)
-        }
-
-    }
-
-    useEffect(() => {
-        setHandleScroll(0)
-        carousel.current.scrollLeft -= carousel.current.offsetWidth * 5
-
-    }, [])
-
-    useEffect(() => {
-
-        const interval = setInterval(() => {
-            if (handleScroll >= 3) {
-                carousel.current.scrollLeft -= carousel.current.offsetWidth * 5
-                setHandleScroll(0)
-            } else {
-                carousel.current.scrollLeft += carousel.current.offsetWidth
-                setHandleScroll(prev => prev + 2)
-            }
-        }, 5000)
-
-        return function cleanup() {
-            clearInterval(interval)
-        }
-
-    }, [handleScroll])
-
-
 
     const cards = [
         { title, price, id: 0 },
@@ -71,6 +17,99 @@ const Carousel = ({ title, price }) => {
         { title, price, id: 5 },
     ]
 
+
+
+    const handleLeftClick = (e) => {
+
+        e.preventDefault()
+
+        if (carousel.current.offsetWidth < 700) {
+            if (handleScroll === 1) {
+                carousel.current.scrollLeft += carousel.current.offsetWidth * 1000
+                setHandleScroll(cards.length)
+            } else {
+                carousel.current.scrollLeft -= carousel.current.offsetWidth
+
+                setHandleScroll(prev => prev - 1)
+            }
+        } else {
+            if (handleScroll <= 1) {
+                carousel.current.scrollLeft += carousel.current.offsetWidth * 1000
+                setHandleScroll(cards.length)
+            } else {
+                carousel.current.scrollLeft -= carousel.current.offsetWidth
+
+                setHandleScroll(prev => prev - (cards.length / 2))
+            }
+        }
+
+
+
+    }
+
+    const handleRightClick = (e) => {
+
+        e.preventDefault()
+
+        if (carousel.current.offsetWidth < 700) {
+            if (handleScroll === cards.length) {
+                carousel.current.scrollLeft -= carousel.current.offsetWidth * 1000
+                setHandleScroll(1)
+            } else {
+                carousel.current.scrollLeft += carousel.current.offsetWidth
+                setHandleScroll(prev => prev + 1)
+            }
+        } else {
+            if (handleScroll >= cards.length) {
+                carousel.current.scrollLeft -= carousel.current.offsetWidth * 1000
+                setHandleScroll(1)
+                console.log(handleScroll)
+
+            } else {
+                carousel.current.scrollLeft += carousel.current.offsetWidth
+                setHandleScroll(prev => prev + (cards.length / 2))
+                console.log(handleScroll)
+            }
+        }
+
+
+
+    }
+
+    useEffect(() => {
+        setHandleScroll(1)
+        carousel.current.scrollLeft -= carousel.current.offsetWidth * 1000
+
+    }, [])
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+            if (carousel.current.offsetWidth < 700) {
+                if (handleScroll === cards.length) {
+                    carousel.current.scrollLeft -= carousel.current.offsetWidth * 1000
+                    setHandleScroll(1)
+                } else {
+                    carousel.current.scrollLeft += carousel.current.offsetWidth
+                    setHandleScroll(prev => prev + 1)
+                }
+            } else {
+                if (handleScroll >= cards.length) {
+                    carousel.current.scrollLeft -= carousel.current.offsetWidth * 1000
+                    setHandleScroll(1)
+                } else {
+                    carousel.current.scrollLeft += carousel.current.offsetWidth
+                    setHandleScroll(prev => prev + (cards.length / 2))
+
+                }
+            }
+        }, 5000)
+
+        return function cleanup() {
+            clearInterval(interval)
+        }
+
+    }, [handleScroll, cards.length])
 
     return (
         <div className='carousel'>
