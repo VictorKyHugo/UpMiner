@@ -5,7 +5,7 @@ import Carousel from './Carousel'
 const History = () => {
 
     const location = useLocation()
-    const { title, price, text } = location.state
+    const { title, price } = location.state
 
 
 
@@ -13,7 +13,7 @@ const History = () => {
         <div className='history'>
             <div className='history__title'>
                 <Link to='/'>
-                    <span className='history__title__go-back'>{icons.arrowBack}</span>
+                    <span onClick={() => window.scrollTo(0, 0)} className='history__title__go-back'>{icons.arrowBack}</span>
                 </Link>
                 <h1 className='history__title__text'>Histórico Empresarial</h1>
             </div>

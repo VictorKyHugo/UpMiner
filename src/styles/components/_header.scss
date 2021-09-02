@@ -13,6 +13,17 @@
     background-position: right;
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
+    
+    &--light{
+        background: linear-gradient(to right, #d9d9d9,white,white), url('../../assets/white-background.png') ;
+        background-size: auto 30rem;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-blend-mode: color-burn;
+
+        color: black;
+
+    }
 
     &__background{
         position: absolute;
@@ -42,6 +53,10 @@
             height: 6.15rem;
 
             margin-top: -2rem;
+
+            &--light{
+                filter: none;
+            }
         }
 
 
@@ -50,7 +65,7 @@
             
             width: 1px;
             height: 4.2rem;
-            background-color: white;
+            background-color: currentColor;
         }
 
     }
@@ -59,6 +74,10 @@
         width: 55rem;
         line-height: 2.5rem;
         margin: 3rem 0 3.5rem;
+
+        &--light{
+            color: #00000070;
+        }
     }
 
     &__info{
@@ -89,4 +108,207 @@
             }
         }
     }
+}
+
+@media(max-width: 1350px){
+    .header{
+        background: linear-gradient(to right, $light-blue,black 53%, rgb(199, 196, 196) ), url('../../assets/blue-background.jpg') ;
+        background-size: auto 30rem;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+
+        &--light{
+            background: linear-gradient(to right, #d9d9d9,white,white), url('../../assets/white-background.png') ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+    }
+}
+@media(max-width: 1297px){
+    .header{
+        background: linear-gradient(to right, $light-blue,black 50.5%, rgb(199, 196, 196) ), url('../../assets/blue-background.jpg') ;
+        background-size: auto 30rem;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+
+        &--light{
+            background: linear-gradient(to right, #d9d9d9,white,white), url('../../assets/white-background.png') ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+    }
+}
+@media(max-width: 1235px){
+    .header{
+        background: linear-gradient(to right, $light-blue,black 48%, rgb(199, 196, 196) );
+        background-size: auto 30rem;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+
+        &--light{
+            background: #d9d9d9 ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+    }
+}
+@media(max-width: 1200px){
+    .header{
+        background: linear-gradient(to right, $light-blue,black 47%, rgb(199, 196, 196) ), url('../../assets/blue-background.jpg') ;
+        background-size: auto 30rem;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+
+        &--light{
+            background: #d9d9d9 ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+    }
+}
+@media(max-width: 1170px){
+    .header{
+        background: linear-gradient(to right, $light-blue,black);
+        background-size: auto 30rem;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+
+        &--light{
+            background: #d9d9d9 ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+    }
+
+@media(max-width: 850px){
+    .header{
+        background: $light-blue;
+        text-align: center;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        &--light{
+            background: #d9d9d9 ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+
+
+      &__info{
+
+        margin-bottom: 2rem;
+
+          &__price{
+              &__value{
+                  margin-right: 8rem;
+              }
+          }
+
+          &__learn-more{
+              margin-left: 8rem;
+          }
+      }
+        
+    }
+}
+@media(max-width: 600px){
+    .header{
+        background: $light-blue;
+        text-align: center;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        &--light{
+            background: #d9d9d9 ;
+            background-size: auto 30rem;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+    
+            color: black;
+    
+        }
+
+        &__brand{
+            &__logo{
+                width: 12rem;
+                margin-top: -0.9rem;
+                height: 4rem;
+            }
+
+            &__title{
+                font-size: 2.5rem;
+            }
+        }
+
+        &__text{
+            width: 30rem;
+            font-size: 1.4rem;
+        }
+
+
+      &__info{
+
+        margin-bottom: 2rem;
+
+          &__price{
+              &__value{
+                  margin-right: 8rem;
+              }
+          }
+
+          &__learn-more{
+              margin-left: 8rem;
+          }
+      }
+        
+    }
+}
 }

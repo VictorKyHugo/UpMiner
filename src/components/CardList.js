@@ -9,6 +9,7 @@ const CardList = () => {
 
     const { hasFilter, isSelected } = useContext(OptionContext)
 
+
     const components = {
         filter: hasFilter,
         cards: [

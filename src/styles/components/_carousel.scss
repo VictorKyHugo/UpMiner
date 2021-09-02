@@ -1,42 +1,102 @@
 .carousel{
+
+    position: relative;
+    
+
+    &__slider{
         display: flex;
+        margin: 0 12rem 0 16rem;
+
+        
+        height: 30rem;
+
+        max-width: 75vw;
 
 
-    margin: 0 12rem;
-    
-    height: 30rem;
+        &__cards{
 
-    max-width: 75vw;
-    
+            overflow: auto;
+            width: 96rem;
+            
+            position: absolute;
+
+            left: 5%;
+            right: 5%;
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            height: 33rem;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+        }
+
+        &__arrows{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__left{
+                width: 5rem;
+                position: absolute;
+                left: 6rem;
+
+                background: none;
+
+                color: #656565;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 80%;
+                }
+            }
+
+            &__right{
+                width: 5rem;
+                position: absolute;
+                right: 6rem;
+                transform: rotate(180deg);
+
+                background: none;
+
+                color: #656565;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 80%;
+                }
+            }
+        }
+
+        &__left-arrow{
+            width: 6rem;
+            color: #656565;
+
+            align-self: center;
+
+        }
+
+        &__right-arrow{
+            transform: rotate(180deg);
+            width: 6rem;
+            justify-self: flex-end;
+            color: #656565;
+
+            align-self: center;
 
 
-
-    &__cards{
-
-    overflow: auto;
-    width: 100%;
-
-       display: flex;
-        align-items: center;
-       height: 33rem;
-    }
-
-    &__left-arrow{
-        width: 6rem;
-        color: #656565;
-
-        align-self: center;
-
-    }
-
-    &__right-arrow{
-        transform: rotate(180deg);
-        width: 6rem;
-        justify-self: flex-end;
-        color: #656565;
-
-        align-self: center;
-
-
-    }
+        }
 }
+
+}
+
+
+
+

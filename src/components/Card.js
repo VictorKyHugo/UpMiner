@@ -22,7 +22,7 @@ const Card = ({ icon, title, price, text }) => {
                         text
                     }
                 }}>
-                    <button className='card__learn-more'>Saiba mais</button>
+                    <button onClick={() => window.scrollTo(0, 0)} className='card__learn-more'>Saiba mais</button>
                 </Link>
 
             </div>
