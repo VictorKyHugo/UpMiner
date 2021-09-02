@@ -7,8 +7,6 @@ const History = () => {
     const location = useLocation()
     const { title, price } = location.state
 
-
-
     return (
         <div className='history'>
             <div className='history__title'>
@@ -41,8 +39,6 @@ const History = () => {
 
                 <button className='history__footer__button'>Habilitar</button>
             </div>
-
-
         </div>
     )
 }

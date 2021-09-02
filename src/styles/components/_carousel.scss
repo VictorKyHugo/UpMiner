@@ -50,7 +50,7 @@
 
                 background: none;
 
-                color: #656565;
+                color: $dark-gray;
 
                 &:hover{
                     cursor: pointer;
@@ -66,7 +66,7 @@
 
                 background: none;
 
-                color: #656565;
+                color: $dark-gray;
 
                 &:hover{
                     cursor: pointer;
@@ -75,28 +75,65 @@
             }
         }
 
-        &__left-arrow{
-            width: 6rem;
-            color: #656565;
-
-            align-self: center;
-
-        }
-
-        &__right-arrow{
-            transform: rotate(180deg);
-            width: 6rem;
-            justify-self: flex-end;
-            color: #656565;
-
-            align-self: center;
-
-
-        }
-}
+    
+    }
 
 }
 
 
+@media(max-width: 1140px){
+    .carousel{
+    
+        &__slider{
+    
+            &__cards{
 
+                width: calc(96rem - 14%);
+               
+            }
+        }
+    }
+}
 
+@media(max-width: 1080px){
+    .carousel{
+    
+        &__slider{
+    
+            &__cards{
+    
+                width: 43.5rem;
+               
+    
+            }
+        }
+    }
+}
+
+@media(max-width: 685px){
+
+.carousel{
+
+    &__slider{
+
+        &__cards{
+            width: 38.5rem;
+        }
+
+        &__arrows{
+
+            &__left{
+                width: 3rem;
+               left: 3rem;
+            }
+
+            &__right{
+                width: 3rem;
+                right: 3rem;
+               
+            }
+        }
+
+      }
+    }
+}

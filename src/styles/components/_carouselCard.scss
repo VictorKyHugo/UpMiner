@@ -6,7 +6,67 @@
 
     flex: none;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     margin: 0 3rem;
 
+    position: relative;
 
+    &__id{
+        color: $dark-orange;
+        font-size: 5rem;
+
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+    }
+
+    &__text{
+        color: $dark-gray;
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__price{
+        color: $dark-gray;
+        font-size: 4rem;
+    }
+
+}
+
+@media(max-width: 1140px){
+    .carousel-card{
+        width: calc(42rem - 10%);
+        height: calc(30rem - 10%);
+    }
+}
+
+@media(max-width: 685px){
+    .carousel-card{
+        width: calc(42rem - 25%);
+        height: calc(30rem - 25%);
+
+        &__id{
+            color: $dark-orange;
+            font-size: 2rem;
+    
+            position: absolute;
+            top: 2rem;
+            left: 3rem;
+        }
+    
+        &__text{
+            color: $dark-gray;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        &__price{
+            color: $dark-gray;
+            font-size: 3rem;
+        }
+    }
 }

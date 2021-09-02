@@ -3,7 +3,6 @@ import { OptionContext } from "../contexts/OptionContext"
 
 const Input = () => {
 
-
     const { isSelected, setIsSelected } = useContext(OptionContext)
 
     const handleChange = (event) => {
@@ -22,9 +21,5 @@ const Input = () => {
         </div>
     )
 }
-
-
-
-
 
 export default Input

@@ -25,7 +25,7 @@
     &__text{
 
         margin: 0 16rem;
-        color: #a2a2a2;
+        color: $gray;
         line-height: 2.5rem;
 
 
@@ -70,4 +70,56 @@
     }
 
    
+}
+
+@media(max-width: 1080px){
+    .history{
+
+        &__title{
+            margin: 4rem 5rem;
+        }
+
+        &__text{
+            text-align: center;
+        }
+    
+        &__footer{
+           
+            justify-content: space-between;
+            margin: 2rem 16rem 6rem;
+
+    
+        }
+    
+       
+    }
+}
+
+@media(max-width: 685px){
+    .history{
+
+        &__title{
+            margin: 4rem 2rem 2rem;
+            transform: scale(90%);
+        }
+
+        &__text{
+            width: 30rem;
+            
+            margin: 0 auto;
+        }
+    
+        &__footer{
+           
+            flex-direction: column;
+            align-items: center;
+
+
+            &__button{
+                margin: 0;
+            }
+        }
+    
+       
+    }
 }

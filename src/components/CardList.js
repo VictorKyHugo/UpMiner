@@ -1,14 +1,11 @@
 import Card from "./Card";
 import icons from '../assets/icons'
-
 import { OptionContext } from '../contexts/OptionContext'
 import { useContext } from "react";
-
 
 const CardList = () => {
 
     const { hasFilter, isSelected } = useContext(OptionContext)
-
 
     const components = {
         filter: hasFilter,
@@ -112,7 +109,6 @@ const CardList = () => {
             }
         </div>
     )
-
 }
 
 export default CardList
